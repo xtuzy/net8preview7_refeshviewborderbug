@@ -1,0 +1,55 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage
+    x:Class="MauiApp1.MainPage"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <Grid x:Name="grid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto" />
+            <RowDefinition Height="*" />
+        </Grid.RowDefinitions>
+        <VerticalStackLayout
+            Grid.Row="0"
+            BackgroundColor="Pink"
+            HeightRequest="20" />
+        <ContentView Grid.Row="1">
+            <RefreshView>
+                <ScrollView x:Name="scrollView">
+                    <VerticalStackLayout
+                        x:Name="stackLayout"
+                        Padding="30,0"
+                        Spacing="25"
+                        VerticalOptions="Center">
+                        <Border HeightRequest="200" WidthRequest="200">
+                            <Image
+                                HorizontalOptions="Center"
+                                SemanticProperties.Description="Cute dot net bot waving hi to you!"
+                                Source="dotnet_bot.png" />
+                        </Border>
+                        <Label
+                            x:Name="helloLabel"
+                            FontSize="32"
+                            HorizontalOptions="Center"
+                            SemanticProperties.HeadingLevel="Level1"
+                            Text="Hello, World!" />
+
+                        <Label
+                            FontSize="18"
+                            HorizontalOptions="Center"
+                            SemanticProperties.Description="Welcome to dot net Multi platform App U I"
+                            SemanticProperties.HeadingLevel="Level2"
+                            Text="Welcome to .NET Multi-platform App UI" />
+
+                        <Button
+                            x:Name="CounterBtn"
+                            Clicked="OnCounterClicked"
+                            HorizontalOptions="Center"
+                            SemanticProperties.Hint="Counts the number of times you click"
+                            Text="Click me" />
+                    </VerticalStackLayout>
+                </ScrollView>
+            </RefreshView>
+        </ContentView>
+    </Grid>
+
+</ContentPage>
