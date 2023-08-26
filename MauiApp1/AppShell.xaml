@@ -18,4 +18,8 @@
         Title="NoRefreshView_Work"
         ContentTemplate="{DataTemplate local:NoRefreshView}"
         Route="NoRefreshView" />
+    <ShellContent
+        Title="ScrollViewSizeBug"
+        ContentTemplate="{DataTemplate local:ScrollViewSizeBug}"
+        Route="ScrollViewSizeBug" />
 </Shell>
