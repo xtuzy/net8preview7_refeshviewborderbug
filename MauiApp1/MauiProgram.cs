@@ -42,7 +42,12 @@ namespace MauiApp1
 #if DEBUG
             builder.Logging.AddDebug();
 #endif
-
+#if ANDROID
+            builder.ConfigureMauiHandlers(handlers =>
+            {
+                handlers.AddHandler(typeof(MyContentView), typeof(MyContentViewHandler));
+            });
+#endif
             return builder.Build();
         }
     }

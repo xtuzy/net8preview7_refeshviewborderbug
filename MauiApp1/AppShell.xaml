@@ -22,4 +22,8 @@
         Title="ScrollViewSizeBug"
         ContentTemplate="{DataTemplate local:ScrollViewSizeBug}"
         Route="ScrollViewSizeBug" />
+    <ShellContent
+        Title="LongClickBug"
+        ContentTemplate="{DataTemplate local:LongClickBug}"
+        Route="LongClickBug" />
 </Shell>

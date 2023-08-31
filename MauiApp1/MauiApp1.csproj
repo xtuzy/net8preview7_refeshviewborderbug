@@ -61,6 +61,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <MauiXaml Update="LongClickBug.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
 	  <MauiXaml Update="NoBorder.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
