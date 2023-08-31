@@ -24,8 +24,14 @@ internal class MyContentViewGroup : Microsoft.Maui.Platform.ContentViewGroup
 {
     public MyContentViewGroup(Android.Content.Context context) : base(context)
     {
-        //this.LongClick += MyContentViewGroup_LongClick;
-        this.SetOnLongClickListener(new LongClick());
+        this.LongClick += MyContentViewGroup_LongClick;
+        //this.SetOnLongClickListener(new LongClick());
+        this.Click += MyContentViewGroup_Click;
+    }
+
+    private void MyContentViewGroup_Click(object sender, EventArgs e)
+    {
+        System.Diagnostics.Debug.WriteLine("Click");
     }
 
     private void MyContentViewGroup_LongClick(object sender, LongClickEventArgs e)
